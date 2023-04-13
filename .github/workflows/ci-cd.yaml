@@ -9,18 +9,27 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
-
-      - name: Test Build
+      - name: Build
         run: npm run build
 
-      - name: Run Prettier check
-        run: npx prettier --check "**/*.{js,jsx,ts,tsx,json,md}"
+  prettier-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Prettier Check
+        run: npx prettier --check .
 
-      - name: Run ESLint check
-        run: npx eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .
+  eslint-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: ESLint Check
+        run: npx eslint .
