@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.2.0
       - name: Install Dependencies
         run: npm install
       - name: Build
@@ -19,7 +19,7 @@ jobs:
   prettier-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.2.0
       - name: Install Dependencies
         run: npm install
       - name: Prettier Check
@@ -28,7 +28,7 @@ jobs:
   eslint-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.2.0
       - name: Install Dependencies
         run: npm install
       - name: ESLint Check
