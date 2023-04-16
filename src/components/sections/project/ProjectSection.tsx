@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProjectSection(): JSX.Element {
   return (
-    <Stack>
+    <Stack alignItems="center">
       <Typography variant="h3">PROJECTS</Typography>
       <Stack spacing={2}>
         <Card sx={{ border: '1px solid black' }}>

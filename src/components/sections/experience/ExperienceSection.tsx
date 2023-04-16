@@ -2,7 +2,7 @@ import { Stack, Step, StepContent, StepLabel, Stepper, Typography } from '@mui/m
 
 export default function ExperienceSection(): JSX.Element {
   return (
-    <Stack>
+    <Stack alignItems="center">
       <Typography variant="h3">WORK EXPERIENCE</Typography>
       <Stepper orientation="vertical" activeStep={0}>
         <Step>

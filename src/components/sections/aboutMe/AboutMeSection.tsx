@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutMeSection(): JSX.Element {
   return (
-    <Stack>
+    <Stack alignItems="center">
       <Typography variant="h3">ABOUT ME</Typography>
       <Stack direction="row" spacing={3}>
         <Image priority src="/profilePicture.png" alt="Profile picture" width={200} height={245} />
