@@ -12,6 +12,14 @@ export default function SkillSection(): JSX.Element {
             <Typography variant="body1">CSS</Typography>
             <Typography variant="body1">JavaScript</Typography>
             <Typography variant="body1">TypeScript</Typography>
+            <Typography variant="body1">React</Typography>
+            <Typography variant="body1">NextJs</Typography>
+            <Typography variant="body1">PHP Laravel</Typography>
+            <Typography variant="body1">C#/.NET</Typography>
+            <Typography variant="body1">ASP.NET</Typography>
+            <Typography variant="body1">Java Spring</Typography>
+            <Typography variant="body1">Haskell</Typography>
+            <Typography variant="body1">Bash Script</Typography>
           </Stack>
         </Box>
         <Box>
