@@ -20,6 +20,15 @@ export default function ProjectSection(): JSX.Element {
             <Typography variant="body2">A simple calculator web application by Svelte.</Typography>
           </CardContent>
         </Card>
+        <Card sx={{ border: '1px solid black' }}>
+          <CardContent>
+            <Typography variant="h6">Java Servlet web application</Typography>
+            <Link href="https://github.com/yyueniao/javaServlet">Github Link</Link>
+            <Typography variant="body2">
+              A simple web application using Java Servlet and Jquery
+            </Typography>
+          </CardContent>
+        </Card>
       </Stack>
     </Stack>
   );
