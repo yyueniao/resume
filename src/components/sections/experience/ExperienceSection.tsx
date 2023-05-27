@@ -1,13 +1,25 @@
 import { Stack, Step, StepContent, StepLabel, Stepper, Typography } from '@mui/material';
+import { useState } from 'react';
 
 export default function ExperienceSection(): JSX.Element {
+  const [activeStep, setActiveStep] = useState(0);
+
+  const handleStepClick = (index: number): void => {
+    setActiveStep(index);
+  };
   return (
     <Stack alignItems="center">
       <Typography variant="h3">WORK EXPERIENCE</Typography>
-      <Stepper orientation="vertical" activeStep={0}>
-        <Step>
+      <Stepper orientation="vertical" activeStep={activeStep}>
+        <Step completed={false}>
           <StepLabel>
-            <Typography variant="h6">DCConnect Global Limited</Typography>
+            <Typography
+              variant="h6"
+              onClick={(): void => handleStepClick(0)}
+              sx={{ cursor: 'pointer' }}
+            >
+              DCConnect Global Limited
+            </Typography>
           </StepLabel>
           <StepContent>
             <Typography variant="body1">Software Developer</Typography>
@@ -29,9 +41,15 @@ export default function ExperienceSection(): JSX.Element {
             </Typography>
           </StepContent>
         </Step>
-        <Step>
+        <Step completed={false}>
           <StepLabel>
-            <Typography variant="h6">Experian</Typography>
+            <Typography
+              variant="h6"
+              onClick={(): void => handleStepClick(1)}
+              sx={{ cursor: 'pointer' }}
+            >
+              Experian
+            </Typography>
           </StepLabel>
           <StepContent>
             <Typography variant="body1">Software Engineer Intern</Typography>
@@ -45,9 +63,15 @@ export default function ExperienceSection(): JSX.Element {
             </Typography>
           </StepContent>
         </Step>
-        <Step>
+        <Step completed={false}>
           <StepLabel>
-            <Typography variant="h6">Smartb Solutions</Typography>
+            <Typography
+              variant="h6"
+              onClick={(): void => handleStepClick(2)}
+              sx={{ cursor: 'pointer' }}
+            >
+              SmartB Solutions
+            </Typography>
           </StepLabel>
           <StepContent>
             <Typography variant="body1">Programmer Internship</Typography>
