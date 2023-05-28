@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutMeSection(): JSX.Element {
   return (
-    <Stack alignItems="center">
+    <Stack component="section" alignItems="center">
       <Typography variant="h3">ABOUT ME</Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: 'center' }}>

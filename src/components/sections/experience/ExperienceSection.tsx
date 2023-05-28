@@ -8,7 +8,7 @@ export default function ExperienceSection(): JSX.Element {
     setActiveStep(index);
   };
   return (
-    <Stack alignItems="center">
+    <Stack component="section" alignItems="center">
       <Typography variant="h3">WORK EXPERIENCE</Typography>
       <Stepper orientation="vertical" activeStep={activeStep}>
         <Step completed={false}>

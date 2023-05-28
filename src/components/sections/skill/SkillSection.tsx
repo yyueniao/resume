@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material';
 
 export default function SkillSection(): JSX.Element {
   return (
-    <Stack alignItems="center">
+    <Stack component="section" alignItems="center">
       <Typography variant="h3">SKILLS</Typography>
       <Stack>
         <Box>
