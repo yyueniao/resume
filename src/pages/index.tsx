@@ -7,7 +7,7 @@ import { Divider, Stack } from '@mui/material';
 
 export default function Home(): JSX.Element {
   return (
-    <Stack alignItems="center" spacing={10} divider={<Divider flexItem />}>
+    <Stack alignItems="center" spacing={10} divider={<Divider flexItem />} sx={{ p: 2 }}>
       <AboutMeSection />
       <ExperienceSection />
       <EducationSection />

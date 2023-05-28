@@ -2,7 +2,7 @@ import { Stack, Typography } from '@mui/material';
 
 export default function EducationSection(): JSX.Element {
   return (
-    <Stack alignItems="center">
+    <Stack component="section" alignItems="center">
       <Typography variant="h3">EDUCATION</Typography>
       <Stack>
         <Typography variant="h6">Fudan University</Typography>
