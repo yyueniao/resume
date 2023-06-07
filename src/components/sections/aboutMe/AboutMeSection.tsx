@@ -1,9 +1,10 @@
 import { Grid, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
+import { forwardRef } from 'react';
 
-export default function AboutMeSection(): JSX.Element {
+const AboutMeSection = forwardRef<HTMLElement>(function AboutMeSection(_prop, ref) {
   return (
-    <Stack component="section" alignItems="center">
+    <Stack component="section" alignItems="center" ref={ref}>
       <Typography variant="h3">ABOUT ME</Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -34,4 +35,5 @@ export default function AboutMeSection(): JSX.Element {
       </Grid>
     </Stack>
   );
-}
+});
+export default AboutMeSection;

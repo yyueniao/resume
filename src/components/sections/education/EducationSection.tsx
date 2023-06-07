@@ -1,8 +1,9 @@
 import { Stack, Typography } from '@mui/material';
+import { forwardRef } from 'react';
 
-export default function EducationSection(): JSX.Element {
+const EducationSection = forwardRef<HTMLElement>(function EducationSection(_props, ref) {
   return (
-    <Stack component="section" alignItems="center">
+    <Stack component="section" alignItems="center" ref={ref}>
       <Typography variant="h3">EDUCATION</Typography>
       <Stack>
         <Typography variant="h6">Fudan University</Typography>
@@ -19,4 +20,5 @@ export default function EducationSection(): JSX.Element {
       </Stack>
     </Stack>
   );
-}
+});
+export default EducationSection;
