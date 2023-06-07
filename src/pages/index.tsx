@@ -16,7 +16,16 @@ export default function Home(): JSX.Element {
 
   return (
     <Grid container>
-      <Grid item xs={2}>
+      <Grid
+        item
+        xs={2}
+        sx={{
+          bgcolor: (theme) => theme.palette.primary.main,
+          color: (theme) => theme.palette.text.primary,
+          display: 'flex',
+          placeContent: 'center',
+        }}
+      >
         <NavigationBar
           sectionRefs={[
             { ref: aboutMeRef, label: 'About Me' },

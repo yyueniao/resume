@@ -18,21 +18,24 @@ export default function NavigationBar({ sectionRefs }: Props): JSX.Element {
   return (
     <Stack
       sx={{
-        bgcolor: (theme) => theme.palette.primary.main,
-        color: (theme) => theme.palette.text.primary,
         padding: 2,
         height: '100%',
         position: 'fixed',
       }}
+      spacing={4}
     >
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" align="center" gutterBottom>
         Navigation
       </Typography>
-      <List component="nav" aria-label="sections navigation">
+      <List component="nav">
         {sectionRefs.map(({ ref, label }) => (
           <ListItem disablePadding>
             <ListItemButton onClick={(): void => handleScrollToSection(ref)}>
-              <ListItemText color="inherit" primary={label} />
+              <ListItemText
+                color="inherit"
+                primary={label}
+                primaryTypographyProps={{ align: 'center' }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
