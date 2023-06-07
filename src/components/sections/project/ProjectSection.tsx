@@ -1,9 +1,10 @@
 import { Card, CardContent, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
+import { forwardRef } from 'react';
 
-export default function ProjectSection(): JSX.Element {
+const ProjectSection = forwardRef<HTMLElement>(function ProjectSection(_props, ref) {
   return (
-    <Stack component="section" alignItems="center">
+    <Stack component="section" alignItems="center" ref={ref}>
       <Typography variant="h3">PROJECTS</Typography>
       <Stack spacing={2}>
         <Card sx={{ border: '1px solid black' }}>
@@ -32,4 +33,5 @@ export default function ProjectSection(): JSX.Element {
       </Stack>
     </Stack>
   );
-}
+});
+export default ProjectSection;

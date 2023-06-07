@@ -1,8 +1,9 @@
 import { Box, Stack, Typography } from '@mui/material';
+import { forwardRef } from 'react';
 
-export default function SkillSection(): JSX.Element {
+const SkillSection = forwardRef<HTMLElement>(function SkillSection(_props, ref) {
   return (
-    <Stack component="section" alignItems="center">
+    <Stack component="section" alignItems="center" ref={ref}>
       <Typography variant="h3">SKILLS</Typography>
       <Stack>
         <Box>
@@ -42,4 +43,5 @@ export default function SkillSection(): JSX.Element {
       </Stack>
     </Stack>
   );
-}
+});
+export default SkillSection;

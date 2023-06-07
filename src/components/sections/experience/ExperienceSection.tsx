@@ -1,14 +1,14 @@
 import { Stack, Step, StepContent, StepLabel, Stepper, Typography } from '@mui/material';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 
-export default function ExperienceSection(): JSX.Element {
+const ExperienceSection = forwardRef<HTMLElement>(function ExperienceSection(_props, ref) {
   const [activeStep, setActiveStep] = useState(0);
 
   const handleStepClick = (index: number): void => {
     setActiveStep(index);
   };
   return (
-    <Stack component="section" alignItems="center">
+    <Stack ref={ref} component="section" alignItems="center">
       <Typography variant="h3">WORK EXPERIENCE</Typography>
       <Stepper orientation="vertical" activeStep={activeStep}>
         <Step completed={false}>
@@ -87,4 +87,5 @@ export default function ExperienceSection(): JSX.Element {
       </Stepper>
     </Stack>
   );
-}
+});
+export default ExperienceSection;
