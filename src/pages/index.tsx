@@ -25,7 +25,7 @@ export default function Home(): JSX.Element {
           lg={3}
           sx={{
             bgcolor: (theme) => theme.palette.primary.main,
-            color: (theme) => theme.palette.text.primary,
+            color: (theme) => theme.palette.primary.contrastText,
             display: 'flex',
             placeContent: 'center',
           }}
