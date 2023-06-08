@@ -29,7 +29,7 @@ export default function NavigationBar({ sectionRefs }: Props): JSX.Element {
       </Typography>
       <List component="nav">
         {sectionRefs.map(({ ref, label }) => (
-          <ListItem disablePadding>
+          <ListItem key={label} disablePadding>
             <ListItemButton onClick={(): void => handleScrollToSection(ref)}>
               <ListItemText
                 color="inherit"
