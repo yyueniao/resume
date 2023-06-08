@@ -34,10 +34,10 @@ export default function ProjectCard({
         <Typography variant="body2">{description}</Typography>
       </CardContent>
       <CardActions>
-        <IconButton LinkComponent={Link} href={githubLink}>
+        <IconButton LinkComponent={Link} href={githubLink} target="_blank">
           <GitHubIcon color="primary" />
         </IconButton>
-        <IconButton LinkComponent={Link} href={websiteLink}>
+        <IconButton LinkComponent={Link} href={websiteLink} target="_blank">
           <LaunchIcon color="primary" />
         </IconButton>
       </CardActions>
