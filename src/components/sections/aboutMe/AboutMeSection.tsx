@@ -24,7 +24,7 @@ const AboutMeSection = forwardRef<HTMLElement>(function AboutMeSection(_prop, re
               in Java and Haskell.
             </Typography>
             <Typography variant="body2">
-              During my bachelor's degree in Mathematics and Applied Mathematics from Fudan
+              During my bachelor&apos;s degree in Mathematics and Applied Mathematics from Fudan
               University, I focused on relevant subjects such as graph theory, data structures, deep
               learning, and mathematical modeling. I also developed a Discord bot for the student
               union independently, written in Python. Additionally, I have received the Shanghai
