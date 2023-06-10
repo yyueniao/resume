@@ -16,7 +16,7 @@ interface Props {
   image: string;
   description: string;
   githubLink: string;
-  websiteLink: string;
+  websiteLink: string | null;
 }
 
 export default function ProjectCard({
@@ -37,8 +37,14 @@ export default function ProjectCard({
         <IconButton LinkComponent={Link} href={githubLink} target="_blank">
           <GitHubIcon color="primary" />
         </IconButton>
-        <IconButton LinkComponent={Link} href={websiteLink} target="_blank">
-          <LaunchIcon color="primary" />
+        <IconButton
+          LinkComponent={Link}
+          disabled={websiteLink === null}
+          href={websiteLink ?? '#'}
+          sx={{ color: (theme) => (websiteLink === null ? 'grey' : theme.palette.primary.main) }}
+          target="_blank"
+        >
+          <LaunchIcon />
         </IconButton>
       </CardActions>
     </Card>
