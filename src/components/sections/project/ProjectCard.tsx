@@ -27,7 +27,7 @@ export default function ProjectCard({
   websiteLink,
 }: Props): JSX.Element {
   return (
-    <Card sx={{ border: '1px solid black', width: '400px' }}>
+    <Card sx={{ border: '1px solid black', width: '300px', flexShrink: 0 }}>
       <CardHeader title={title} subheader="Apr 2023" />
       <CardMedia component="img" alt="Resume" image={image} />
       <CardContent>

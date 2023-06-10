@@ -4,9 +4,9 @@ import ProjectCard from './ProjectCard';
 
 const ProjectSection = forwardRef<HTMLElement>(function ProjectSection(_props, ref) {
   return (
-    <Stack component="section" alignItems="center" ref={ref}>
+    <Stack component="section" alignItems="center" ref={ref} sx={{ maxWidth: '100%' }}>
       <Typography variant="h3">PROJECTS</Typography>
-      <Stack spacing={2}>
+      <Stack spacing={2} direction="row" sx={{ overflowX: 'auto', maxWidth: '100%' }}>
         <ProjectCard
           title={'Resume'}
           image={'/resumeThumbnail.png'}
@@ -17,7 +17,7 @@ const ProjectSection = forwardRef<HTMLElement>(function ProjectSection(_props, r
           websiteLink={'https://online-resume-sepia.vercel.app/'}
         />
         <ProjectCard
-          title={'Visitor Management System'}
+          title={'Visitor Management'}
           image={'/visitorManagementSystemThumbnail.png'}
           description={
             'A visitor management system for staff to register visitors, monitor activity. Built with Laravel, Bootstrap, and MySQL.'
