@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
           />
         </Grid>
       )}
-      <Grid item xs={12} md lg>
+      <Grid item xs md lg>
         <Stack alignItems="center" spacing={10} divider={<Divider flexItem />} sx={{ p: 2 }}>
           <AboutMeSection ref={aboutMeRef} />
           <ExperienceSection ref={experienceRef} />
