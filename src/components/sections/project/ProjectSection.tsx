@@ -1,5 +1,4 @@
-import { Card, CardContent, Stack, Typography } from '@mui/material';
-import Link from 'next/link';
+import { Stack, Typography } from '@mui/material';
 import { forwardRef } from 'react';
 import ProjectCard from './ProjectCard';
 
@@ -17,22 +16,22 @@ const ProjectSection = forwardRef<HTMLElement>(function ProjectSection(_props, r
           githubLink={'https://github.com/yyueniao/resume'}
           websiteLink={'https://online-resume-sepia.vercel.app/'}
         />
-        <Card sx={{ border: '1px solid black' }}>
-          <CardContent>
-            <Typography variant="h6">Calculator</Typography>
-            <Link href="https://github.com/yyueniao/calculator">Github Link</Link>
-            <Typography variant="body2">A simple calculator web application by Svelte.</Typography>
-          </CardContent>
-        </Card>
-        <Card sx={{ border: '1px solid black' }}>
-          <CardContent>
-            <Typography variant="h6">Java Servlet web application</Typography>
-            <Link href="https://github.com/yyueniao/javaServlet">Github Link</Link>
-            <Typography variant="body2">
-              A simple web application using Java Servlet and Jquery
-            </Typography>
-          </CardContent>
-        </Card>
+        <ProjectCard
+          title={'Visitor Management System'}
+          image={'/visitorManagementSystemThumbnail.png'}
+          description={
+            'A visitor management system for staff to register visitors, monitor activity. Built with Laravel, Bootstrap, and MySQL.'
+          }
+          githubLink={'https://github.com/yyueniao/visitor-management-system'}
+          websiteLink={null}
+        />
+        <ProjectCard
+          title={'Calculator'}
+          image={'/calculatorThumbnail.png'}
+          description={'A simple calculator web application by Svelte.'}
+          githubLink={'https://github.com/yyueniao/calculator'}
+          websiteLink={null}
+        />
       </Stack>
     </Stack>
   );
